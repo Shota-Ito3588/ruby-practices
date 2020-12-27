@@ -13,12 +13,12 @@ print "  " * firstday_wday #１日までの空白を表示
 
 wday = firstday_wday
 (1..lastday_wday).each do |date| #(1..last...)で指定した範囲で繰り返し
-print date.to_s.rjust(2) + " " #日付を右寄せで表示
- wday = wday+1
-if wday%7==0 #7の倍数で改行
- print "\n"
- end
+  print date.to_s.rjust(2) + " " #日付を右寄せで表示
+  wday = wday+1
+  if wday%7==0 #7の倍数で改行
+    print "\n"
+  end
 end
 if wday%7!=0
- print "\n"
+  print "\n"
 end
