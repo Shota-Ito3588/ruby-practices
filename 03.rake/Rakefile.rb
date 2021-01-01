@@ -1,0 +1,8 @@
+CC = 'gcc'
+
+task default: 'hello'
+
+desc 'compile .c file'
+file 'hello' => 'hello.c' do
+  sh "#{CC} -o hello hello.c"
+end
